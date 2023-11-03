@@ -1,0 +1,40 @@
+site_name: MyPackage
+site_description: Use this template to create a custom Python package.
+
+repo_url: https://github.com/malill/MyPackage
+repo_name: malill/MyPackage
+
+theme:
+    icon:
+        repo: fontawesome/brands/github
+    name: "material"
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          primary: "blue"
+          accent: "grey"
+          scheme: default
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: "blue"
+          accent: "white"
+          scheme: slate
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+
+plugins:
+    - search
+    - mkdocstrings
+
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences
+
+nav:
+    - "Introduction": index.md
+    - "Getting Started":
+          - "Do This": getting_started/do_this.md
+          - "Do That": getting_started/do_that.md
+    - "Changelog": changelog.md
